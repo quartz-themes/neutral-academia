@@ -505,8 +505,8 @@ for i in "${themes[@]}"; do
   sed -i -e 's|pageTitle: Quartz 5|pageTitle: '${i}'|' quartz.config.default.yaml
 
   # replace baseUrl: "quartz.jzhao.xyz", with baseUrl: "quartz-themes.github.io/${i}", in `quartz.config.ts`
-  sed -i -e 's|baseUrl: quartz-themes.github.io|baseUrl: quartz-themes.github.io/'${i}'|' quartz.config.yaml
-  sed -i -e 's|baseUrl: v5.quartz-1h4.pages.dev|baseUrl: quartz-themes.github.io/'${i}'|' quartz.config.default.yaml
+  sed -i -e 's|baseUrl: quartz-themes.github.io$|baseUrl: quartz-themes.github.io/'${i}'|' quartz.config.yaml
+  sed -i -e 's|baseUrl: v5.quartz-1h4.pages.dev$|baseUrl: quartz-themes.github.io/'${i}'|' quartz.config.default.yaml
 
   sed -i -e 's|theme: default|theme: '${THEME}'|' quartz.config.yaml
   sed -i -e 's|theme: default|theme: '${THEME}'|' quartz.config.default.yaml
